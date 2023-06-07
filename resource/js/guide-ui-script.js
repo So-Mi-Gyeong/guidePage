@@ -5,7 +5,7 @@ $(document).ready(function(){
     //const tabItem = document.querySelectorAll('.defualt_tab_item');
 
 
-    //바닐라스크립트
+    //Tab
     // for(var i = 0; i < tabItem.length; i++){
     //   tabItem[i].querySelector('.btn').addEventListener('click', function(e){
     //     e.preventDefault();
@@ -34,19 +34,15 @@ $(document).ready(function(){
 
         for(const tabClick of tabChild){
           tabClick.addEventListener('click', function(){//클릭한 li
-            let elePrent = this.parentElement;
-            let silblingEle = elePrent.firstElementChild;
-            let eleNext = this.nextElementSibling;
-            let siblings = [];
+            let elePrent = this.parentElement; //클릭한 li의 부모요소
+            let prentChild = elePrent.children; //elePrent의 자식요소
+            let eleonClass = elePrent.getElementsByClassName('on'); //prentChild 중 on을 가진 요소
 
-            //let elePrev = this.previousElementSibling;
+            let onBowl = [];
+            onBowl.push(eleonClass);//on을 가진 요소를 배열에 담기
 
-           for(const silbl of tabChild){
-            siblings.push(silblingEle); //siblings에 첫번째 자식요소 push
-            silblingEle = silblingEle.nextElementSibling; //다음 형제요소 찾기
-           }
-
-           this.classList.add('on');
+            eleonClass.classList.remove('on');
+            //this.classList.add('on'); //클릭한 요소에 on 추가
 
           });   
         }
