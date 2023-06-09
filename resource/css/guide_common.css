@@ -358,4 +358,38 @@ h3, .fs-h3{
 .btnBig-B{
   font-size: 20px;
 }
+
+.textBtn{
+  width: 196px;
+  height: 56px;
+  padding: 16px 40px;
+  text-align: center;
+  border: 1px solid #fff;
+  background-color: #1A399E;
+  color: #fff;
+  border-radius: 40px;
+  font-size: 16px;
+  box-sizing: border-box;
+  line-height: 24px;
+}
+.textBtn span{
+  position: relative;
+}
+.textBtn span::after{
+  content: '';
+  width: 10px;
+  height: 8px;
+  background: url('../img/vector_white.png') 0 0 / 100%  no-repeat;
+  position: absolute;
+  top: 50%;
+  right: -15px;
+  transform: translateY(-50%);
+}
+.textBtn.typeBlue{
+  background-color: #fff;
+  color: #1A399E;
+}
+.textBtn.typeBlue span::after{
+  background: url('../img/vector_blue.png') 0 0 / 100%  no-repeat;
+}
 /* --------------- //button --------------- */

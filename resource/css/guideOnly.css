@@ -83,7 +83,8 @@
 /* ----------- //color ----------- */
 
 /* ----------- button ----------- */
-p + button{
+p + button,
+p + .btnArea{
   margin-top: 20px;
 }
 .btnArea{

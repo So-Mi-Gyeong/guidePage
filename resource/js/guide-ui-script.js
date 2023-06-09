@@ -41,9 +41,10 @@ $(document).ready(function(){
             let onBowl = [];
             onBowl.push(eleonClass);//on을 가진 요소를 배열에 담기
 
-            eleonClass.classList.remove('on');
-            //this.classList.add('on'); //클릭한 요소에 on 추가
-
+            for(let aa of onBowl){
+              aa.classList.remove('on');
+            }
+            
           });   
         }
 
