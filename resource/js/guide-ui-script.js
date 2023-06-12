@@ -1,79 +1,24 @@
 $(document).ready(function(){
-
   const myTab = () => {
-    const tabList = document.querySelectorAll('.defualt_tab_list');
-    //const tabItem = document.querySelectorAll('.defualt_tab_item');
-
-
-    //Tab
-    // for(var i = 0; i < tabItem.length; i++){
-    //   tabItem[i].querySelector('.btn').addEventListener('click', function(e){
-    //     e.preventDefault();
-    //     for(var j = 0; j < tabItem.length; j++){
-    //       tabItem[j].classList.remove('on');
-    //     }
-    //     this.parentNode.classList.add('on');
-    //   });
-    // }
- 
-    //forOf
-    // for (const tab of tabItem) {
-    //   tab.addEventListener('click', function(e){
-    //     for(let tabClick of tabItem){
-    //       tabClick.classList.remove('on');
-    //     }
-    //     this.classList.add('on');
-    //   });
-    // }
-
-    //tabAct에 넣은 forOf
-    for(const tabArea of tabList){
-
-      tabArea.addEventListener('click', function(){
-        let tabChild = this.children;//클릭한 ul의 자식요소
-
-        for(const tabClick of tabChild){
-          tabClick.addEventListener('click', function(){//클릭한 li
-            let elePrent = this.parentElement; //클릭한 li의 부모요소
-            let prentChild = elePrent.children; //elePrent의 자식요소
-            let eleonClass = elePrent.getElementsByClassName('on'); //prentChild 중 on을 가진 요소
-
-            let onBowl = [];
-            onBowl.push(eleonClass);//on을 가진 요소를 배열에 담기
-
-            for(let aa of onBowl){
-              aa.classList.remove('on');
-            }
-            
-          });   
+    const tabList = document.querySelectorAll('.defualt_tab_list');  //ul 리스트
+    for(const tabArea of tabList){   //tabArea  --> ul 
+      tabArea.addEventListener('click', function(e){  //ul에 클릭 이벤트
+        const tabChild = this.children; // li 리스트
+        
+        console.log(tabChild)
+        //li를 모두 찾아서 class 값이 on인 거를 모두 제거
+        for (const child of tabChild) { 
+          if(child.classList.contains('on')){ 
+            child.classList.remove('on');
+          }
         }
+        
+        //e 내가 클릭한 녀석 의 이벤트 값이고 e.target은 내가 클릭한 녀석 
+        //e.target은 a태그 이므로 그녀석의 부모 e.target.parentElement(li 요소)를 찾아서 class on을 붙여 준다.
+        e.target.parentElement.classList.add('on');
 
       });
-
     }
-
-
-    // const tabAct = (e) => {
-
-  
-    //   for (const tabArea of tabItem){
-    //     tabArea.addEventListener('click', function(e){
-    //       if(this.classList.contains('on')){
-    //         this.classList.remove('on');
-    //       }else{
-    //         this.classList.add('on');
-    //       }
-    //       for(let tabClick of tabItem){
-    //         tabClick.classList.remove('on');
-    //       }
-    //       this.classList.add('on');
-    //     });
-    //   }
-    // }
-
-    // for (const tab of tabList) {
-    //   tab.addEventListener('click', tabAct);
-    // }
   }
   myTab();
 });
