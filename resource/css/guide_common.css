@@ -392,4 +392,40 @@ h3, .fs-h3{
 .textBtn.typeBlue span::after{
   background: url('../img/vector_blue.png') 0 0 / 100%  no-repeat;
 }
+
+.rectangleBtn{
+  width: 160px;
+  height: 48px;
+  background-color: #fff;
+  border: 1px solid var(--gray07) ;
+  border-radius: 40px;
+  padding: 10px;
+  color: var(--gray07);
+  font-size: 14px;
+  box-sizing: border-box;
+}
+.rectangleBtn span{
+  position: relative;
+}
+.rectangleBtn span::after{
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: url('../img/rectangleIco.png') 0 0 / 100% no-repeat;
+  position: absolute;
+  top: 50%;
+  right: -16px;
+  transform: translateY(-50%);
+}
+.rectangleBtn:hover{
+  background-color: var(--primary01);
+  border: 1px solid var(--primary01);
+  color: #fff;
+}
+.rectangleBtn:hover span::after{
+    background: url('../img/rectangleIco_white.png') 0 0 / 100% no-repeat;
+}
+.rectangleBtn.lg{
+  width: 223px;
+}
 /* --------------- //button --------------- */
