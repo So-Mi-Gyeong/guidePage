@@ -374,6 +374,7 @@ h3, .fs-h3{
 }
 .textBtn span{
   position: relative;
+  left: -7px;
 }
 .textBtn span::after{
   content: '';
@@ -406,6 +407,7 @@ h3, .fs-h3{
 }
 .rectangleBtn span{
   position: relative;
+  left: -6px;
 }
 .rectangleBtn span::after{
   content: '';
@@ -427,5 +429,65 @@ h3, .fs-h3{
 }
 .rectangleBtn.lg{
   width: 223px;
+}
+
+.boxBtn{
+  width: 90px;
+  height: 48px;
+  padding: 14px 24px;
+  font-size: 14px;
+  background-color: #FFFFFF;
+  border: 1px solid var(--gray07);
+  border-radius: 8px;
+  color: var(--gray07);
+  box-sizing: border-box;
+}
+.boxBtn span{
+  position: relative;
+  left: -6px;
+}
+.boxBtn span::after{
+  content: '';
+  width: 10px;
+  height: 12px;
+  background: url('../img/download.png') 0 0 / 100% no-repeat;
+  position: absolute;
+  top: 50%;
+  right: -16px;
+  transform: translateY(-50%);
+}
+.boxBtn:hover{
+  background-color: var(--gray01);
+}
+
+.boxBtn.type02{
+  border: 1px solid var(--primary01);
+  color: var(--primary01);
+}
+.boxBtn.type02 span::after{
+  background: url('../img/download_pink.png') 0 0 / 100% no-repeat;
+}
+.boxBtn.type02:hover{
+  background-color: var(--primary01);
+  color: #fff;
+}
+.boxBtn.type02:hover span::after{
+  background: url('../img/download_white.png') 0 0 / 100% no-repeat;
+}
+.boxBtn:disabled{
+  background-color: var(--gray02);
+  color: var(--gray03);
+  border: 1px solid var(--gray03);
+}
+.boxBtn:disabled span::after{
+  background: url('../img/download_gray.png') 0 0 / 100% no-repeat;
+}
+.boxBtn:disabled:hover{
+  background-color: var(--gray02);
+  color: var(--gray03);
+  border: 1px solid var(--gray03);
+}
+.boxBtn:disabled:hover span::after{
+  background: url('../img/download_gray.png') 0 0 / 100% no-repeat;
 }
 /* --------------- //button --------------- */
